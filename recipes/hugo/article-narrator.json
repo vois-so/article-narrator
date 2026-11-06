@@ -1,0 +1,10 @@
+{
+  "content": "content",
+  "include": ["posts/**/*.md"],
+  "out": "static/narration",
+  "url": "/narration",
+  "manifest": "data/narration.json",
+  "engine": "sonic",
+  "voice": "sonic_cedar",
+  "language": "English"
+}

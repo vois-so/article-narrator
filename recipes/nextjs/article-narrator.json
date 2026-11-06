@@ -1,0 +1,9 @@
+{
+  "content": "content/posts",
+  "out": "public/narration",
+  "url": "/narration",
+  "manifest": "content/narration.json",
+  "engine": "sonic",
+  "voice": "sonic_cedar",
+  "language": "English"
+}

@@ -1,0 +1,25 @@
+---
+// Shows the "listen to this article" player for one post.
+// The manifest comes from `article-narrator build`. If the post has no audio,
+// the component shows nothing.
+import { existsSync, readFileSync } from 'node:fs';
+
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+const file = 'src/data/narration.json';
+const manifest = existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) : { posts: {} };
+const audio = manifest.posts[id];
+---
+
+{audio && (
+  <article-narrator src={audio.src} duration={audio.duration}>
+    <audio controls preload="none" src={audio.src}></audio>
+  </article-narrator>
+)}
+
+<script>
+  import '@vois-so/article-narrator/player';
+</script>

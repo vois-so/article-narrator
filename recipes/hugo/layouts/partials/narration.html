@@ -1,0 +1,18 @@
+{{- /*
+  Shows the "listen to this article" player for the current page.
+  The data comes from data/narration.json, which `article-narrator build` writes.
+  If the page has no audio, the partial shows nothing.
+  Use it in a single page template: {{ partial "narration.html" . }}
+*/ -}}
+{{- with site.Data.narration -}}
+  {{- with $.File -}}
+    {{- $id := strings.TrimSuffix (printf ".%s" .Ext) (replace .Path "\\" "/") -}}
+    {{- $id = strings.TrimSuffix "/index" $id -}}
+    {{- with index $.Site.Data.narration.posts $id -}}
+      <article-narrator src="{{ .src }}" duration="{{ .duration }}">
+        <audio controls preload="none" src="{{ .src }}"></audio>
+      </article-narrator>
+      <script src="{{ "js/article-narrator.js" | relURL }}" defer></script>
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
