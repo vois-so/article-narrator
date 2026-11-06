@@ -1,0 +1,17 @@
+{
+  "name": "article-narrator-astro-example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "narrate": "article-narrator build",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^7.4.7"
+  },
+  "devDependencies": {
+    "@vois-so/article-narrator": "github:vois-so/article-narrator"
+  }
+}

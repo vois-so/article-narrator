@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <style>
+      :root { color-scheme: light dark; font-family: system-ui, sans-serif; line-height: 1.6; }
+      body { max-width: 42rem; margin: 2rem auto; padding: 0 1rem; }
+      pre { overflow-x: auto; padding: .75rem; border: 1px solid rgba(127, 127, 127, .4); }
+      table { border-collapse: collapse; }
+      th, td { padding: .25rem .5rem; border: 1px solid rgba(127, 127, 127, .4); }
+    </style>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
