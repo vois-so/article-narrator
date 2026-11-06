@@ -17,7 +17,7 @@ There is no hosted part. article-narrator does not upload files to a service. Yo
 ## Plans
 
 - For audio files from `vois-cli`, a paid plan of Vois Studio or export credits are necessary.
-- For a commercial site, the Pro plan is necessary.
+- For a commercial site, a paid plan is necessary: Pro, Subscriber or AppSumo Lifetime Tier 3.
 - The Free plan is for personal and non-commercial use. With export credits, the Free plan can make audio files.
 - On export credits, each part of the audio uses one credit. A part has 1,900 characters or less. article-narrator stops before it uses credits. To let it use credits, add `--use-credits`.
 - [Compare the plans](https://vois.so/pricing?utm_source=github&utm_medium=article-narrator&utm_campaign=oss).
